@@ -76,9 +76,11 @@ Press Enter to open github.com in your browser...
 ✓ Configured git protocol
 ✓ Logged in as melippmann
 ```
-
 Since I will want to set up GitHub actions late will want to review: 
 
 https://docs.github.com/en/actions/security-guides/automatic-token-authentication
 
+```
+git push --set-upstream origin main
+```
 Share GitHub repo in Slack and push changes frequently.
