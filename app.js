@@ -4,11 +4,13 @@ const port = 3000
 
 var jsonObj = {
     "message": "My name is Meher Lippmann",
-    "timestamp": Date(),
+    "timestamp": new Date(),
 }
 
 console.log(jsonObj)
+
 app.get('/', (req, res) => {
+  jsonObj.timestamp=new Date();
   res.send(jsonObj)
 })
 
