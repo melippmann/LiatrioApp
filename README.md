@@ -84,3 +84,62 @@ https://docs.github.com/en/actions/security-guides/automatic-token-authenticatio
 git push --set-upstream origin main
 ```
 Share GitHub repo in Slack and push changes frequently.
+
+## Node.js Application
+Install Node.js and use Express.js to build a simple single endpoint web applicaiton that returns the following JSON object.:
+
+```
+{
+    "message": "My name is Meher Lippmann",
+    "timestamp": dynamically genearted timestamp
+}
+```
+Having never used Node.js or Express.js
+
+The first thing I will do is peruse 
+https://nodejs.org/en/about
+and
+https://expressjs.com/
+
+I am running on Ubuntu 20.04; will install using apt:
+
+```
+sudo apt update
+sudo apt install nodejs
+node -v
+
+```
+```
+v12.22.9
+```
+```
+sudo apt install npm
+```
+
+I can now install Express.js as described: 
+
+https://expressjs.com/en/starter/installing.html
+
+In the LiatrioApp directory run:
+
+```
+npm init
+```
+This command is used to generate a package.json file for the project
+```
+package name: (liatrioapp) 
+version: (1.0.0) 
+description: This is a simple single endpoint web application that returns a JSON object with a message and dynamically set timestamp.
+entry point: (index.js)
+...
+```
+Default settings were choosen, though a description and authorship was added.
+
+https://expressjs.com/en/starter/installing.html
+```
+
+npm install express
+```
+and following the "hello world" 
+https://expressjs.com/en/starter/hello-world.html
+turorial was enough to get the desired app up and running.
