@@ -1,16 +1,16 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 80
 
 var jsonObj = {
     "message": "My name is Meher Lippmann",
-    "timestamp": new Date(),
+    "timestamp": Date(),
 }
 
-console.log(jsonObj)
 
 app.get('/', (req, res) => {
-  jsonObj.timestamp=new Date();
+  console.log(jsonObj)
+  jsonObj.timestamp= Date();
   res.send(jsonObj)
 })
 
