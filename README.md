@@ -195,7 +195,7 @@ Let's get started!
 ? What version of Node do you want to use? 12.22.9
 ? Which package manager do you want to use? npm
 ? What command do you want to use to start the app: node app.js
-? What port does your server listen on? 3000
+? What port does your server listen on? 80
 
 ```
 this creates
@@ -220,7 +220,7 @@ docker compose up --build
 ```
 navigating to
 ```
-http://localhost:3000/
+http://localhost:80/
 ``` 
 in the browser demonstrates that it is working
 ```
