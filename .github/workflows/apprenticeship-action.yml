@@ -1,3 +1,8 @@
+name: Apprenticeship-action
+on:
+    push:
+        branches: [ "main" ]
+    pull_requests: [ "main" ]
 jobs:
     build:
       runs-on: ubuntu-latest
