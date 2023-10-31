@@ -1,3 +1,5 @@
+[![Docker Image CI](https://github.com/melippmann/LiatrioApp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/melippmann/LiatrioApp/actions/workflows/docker-image.yml)
+
 # LiatrioApp
 This Repository is part of the Liatrio Apprenticeship Interview Exercise
 
