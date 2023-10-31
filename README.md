@@ -143,3 +143,98 @@ npm install express
 and following the "hello world" 
 https://expressjs.com/en/starter/hello-world.html
 turorial was enough to get the desired app up and running.
+
+## Docker Containerization
+using Docker's docs for node.js applications:
+https://docs.docker.com/language/nodejs/containerize/
+
+giving docker-desktop a try:
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+following
+https://docs.docker.com/desktop/install/ubuntu/
+
+```
+sudo apt install gnome-terminal
+sudo apt-get update
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+```
+Download the latest DEB package and install:
+
+```
+sudo apt-get update
+sudo apt-get install ./docker-desktop-<version>-<arch>.deb
+
+```
+Now we can use 
+
+```
+docker init
+Welcome to the Docker Init CLI!
+
+This utility will walk you through creating the following files with sensible defaults for your project:
+  - .dockerignore
+  - Dockerfile
+  - compose.yaml
+
+Let's get started!
+
+? What application platform does your project use? Node
+? What version of Node do you want to use? 12.22.9
+? Which package manager do you want to use? npm
+? What command do you want to use to start the app: node app.js
+? What port does your server listen on? 3000
+
+```
+this creates
+
+```
+├── docker-nodejs-sample/
+│ ├── spec/
+│ ├── src/
+│ ├── .dockerignore
+│ ├── .gitignore
+│ ├── compose.yaml
+│ ├── Dockerfile
+│ ├── package-lock.json
+│ ├── package.json
+│ └── README.md
+```
+
+run with 
+
+```
+docker compose up --build
+```
+navigating to
+```
+http://localhost:3000/
+``` 
+in the browser demonstrates that it is working
+```
+ctr+c
+```
+to shut down.
+
+To run in the background:
+```
+docker compose up --build -d
+
+```
+and to shut down:
+
+```
+docker compose down
+```
