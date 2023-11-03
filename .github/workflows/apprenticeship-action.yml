@@ -9,6 +9,4 @@ jobs:
       steps:
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@master
-        with:
-            token: ${{ secrets.access-token}}
             
