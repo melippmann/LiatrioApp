@@ -8,5 +8,5 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: run tests
-        uses: liatrio/github-actions/apprentice-action@apprentice-action
+        uses: liatrio/github-actions/apprentice-action@808117af9b4a1e57c4cb79dbcb2d25de5ea3c68d
             
