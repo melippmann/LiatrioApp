@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 80
+const hostname='localhost'
 
 var jsonObj = {
     "message": "My name is Meher Lippmann",
@@ -15,5 +16,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`server running at http;//${hostname}:${port}`)
 })
