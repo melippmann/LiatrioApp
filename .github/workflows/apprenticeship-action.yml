@@ -9,7 +9,7 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker build -t liatrio build .
+        run: docker build -t liatrio-build .
       - name: run image
         run: docker -dp 127.0.0.1:80:80
       - name: run tests
