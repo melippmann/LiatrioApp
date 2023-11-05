@@ -1,7 +1,5 @@
 [![Apprenticeship-action](https://github.com/melippmann/LiatrioApp/actions/workflows/apprenticeship-action.yml/badge.svg)](https://github.com/melippmann/LiatrioApp/actions/workflows/apprenticeship-action.yml)
 
-[![Docker Image CI](https://github.com/melippmann/LiatrioApp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/melippmann/LiatrioApp/actions/workflows/docker-image.yml)
-
 
 # LiatrioApp
 <details><summary>Description</summary><p>
