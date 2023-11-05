@@ -9,9 +9,16 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker build -t liatrio-build .
+        run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/liatrio_apprenticeship_exercise
       - name: run image
-        run: docker run -dp 80:80 liatrio-build
+        run: docker run -dp 80:80 ${{secrets.DOCKER_USER}}/liatrio_apprenticeship_exercise
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@808117af9b4a1e57c4cb79dbcb2d25de5ea3c68d
-            
+      - name: docker login
+        env:
+            DOCKER_USER: ${{secrets.DOCKER_USER}}
+            DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        run: |
+            docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      - name: Docker Push
+        run: docker push ${{secrets.DOCKER_USER}}/liatrio_apprenticeship_exercise
