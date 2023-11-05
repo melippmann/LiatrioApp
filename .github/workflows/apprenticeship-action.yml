@@ -11,7 +11,7 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/liatrio_apprenticeship_exercise
       - name: run image
-        run: docker run -dp 80:80 liatrio_apprenticeship_exercise
+        run: docker run -dp 80:80 ${{secrets.DOCKER_USER}}/liatrio_apprenticeship_exercise
       - name: run tests
         uses: liatrio/github-actions/apprentice-action@808117af9b4a1e57c4cb79dbcb2d25de5ea3c68d
       - name: docker login
