@@ -1,3 +1,5 @@
+[![Apprenticeship-action](https://github.com/melippmann/LiatrioApp/actions/workflows/apprenticeship-action.yml/badge.svg)](https://github.com/melippmann/LiatrioApp/actions/workflows/apprenticeship-action.yml)
+
 [![Docker Image CI](https://github.com/melippmann/LiatrioApp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/melippmann/LiatrioApp/actions/workflows/docker-image.yml)
 
 # LiatrioApp
@@ -243,3 +245,20 @@ docker compose down
 ## GitHub Actions
 
 https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions
+
+For the github action instead of using docker compose up/down
+
+using 
+
+```
+docker build -t <tag-name>
+docker run -dp 80:80 <tag-name>
+
+```
+The `-t` option in the `build` command is to designate a human readable tag name for the container
+`-dp` is an option to run  in the background and port mapping `host:container`
+https://docs.docker.com/get-started/02_our_app/
+
+
+add notes on: 
+https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions
