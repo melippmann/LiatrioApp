@@ -9,7 +9,7 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker build -t liatrio_apprenticeship_exercise .
+        run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/liatrio_apprenticeship_exercise
       - name: run image
         run: docker run -dp 80:80 liatrio_apprenticeship_exercise
       - name: run tests
