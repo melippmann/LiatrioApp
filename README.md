@@ -1,14 +1,26 @@
 [![Apprenticeship-action](https://github.com/melippmann/LiatrioApp/actions/workflows/apprenticeship-action.yml/badge.svg)](https://github.com/melippmann/LiatrioApp/actions/workflows/apprenticeship-action.yml)
 
-
-# LiatrioApp
+# Liatrio Apprenticeship Interview Exercise
 <details><summary>Description</summary><p>
-This Repository is part of the Liatrio Apprenticeship Interview Exercise
+
+This Repository is part of the Liatrio Apprenticeship Interview Exercise.
+
+This document is being used to document how I approached the task.
+
 </p>
 </details>
 
 ## GitHub Repository
+<details><summary>Task Description</summary><p>
+
+- [x] Create a public GitHub Repository to store the code and files for the webApp.
+- [x] Share the repo on Slack and push up changes frequently.
+
+</p>
+</details>
+
 <details><summary>Setup details</summary><p>
+
   The following steps were taken to set up Git and GitHub:
   Create new dirrectory
   ```
@@ -90,10 +102,12 @@ https://docs.github.com/en/actions/security-guides/automatic-token-authenticatio
 git push --set-upstream origin main
 ```
 Share GitHub repo in Slack and push changes frequently.
+
 </p>
 </details>
 
 ## Node.js Application
+
 <details><summary>requirements and processes</summary><p>
 Install Node.js and use Express.js to build a simple single endpoint web applicaiton that returns the following JSON object.:
 
@@ -152,10 +166,12 @@ npm install express
 and following the "hello world" 
 https://expressjs.com/en/starter/hello-world.html
 turorial was enough to get the desired app up and running.
+
 </p>
 </details>
 
 ## Docker Containerization
+
 <details><summary>process</summary><p>
 using Docker's docs for node.js applications:
 https://docs.docker.com/language/nodejs/containerize/
@@ -250,10 +266,12 @@ and to shut down:
 ```
 docker compose down
 ```
+
 </p>
 </details>
 
 ## GitHub Actions
+
 <details><summary>details</summary><p>
 
 https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions
@@ -275,7 +293,7 @@ https://docs.docker.com/get-started/02_our_app/
 add notes on: 
 https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions
 
-## Push to dockerhub
+# Push to dockerhub
 
 https://medium.com/platformer-blog/lets-publish-a-docker-image-to-docker-hub-using-a-github-action-f0b17e5cceb3
 https://medium.com/@deepakshakya/beginners-guide-to-use-docker-build-run-push-and-pull-4a132c094d75
@@ -284,12 +302,14 @@ https://medium.com/@deepakshakya/beginners-guide-to-use-docker-build-run-push-an
 </details>
 
 ## Cloud Deployment
+
 <details><summary>details</summary><p>
 
 </p>
 </details>
 
 ## Deployment Workflow
+
 <details><summary>details</summary><p>
 
 </p>
