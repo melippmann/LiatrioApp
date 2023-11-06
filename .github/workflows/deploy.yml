@@ -12,7 +12,7 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/liatrio_exercise
+        run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/liatrioexercise
       - name: docker login
         env:
             DOCKER_USER: ${{secrets.DOCKER_USER}}
@@ -20,7 +20,7 @@ jobs:
         run: |
             docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Docker Push
-        run: docker push ${{secrets.DOCKER_USER}}/liatrio_exercise
+        run: docker push ${{secrets.DOCKER_USER}}/liatrioexercise
       
       - id: 'auth'
         name: 'Authenticate to Google Cloud'
@@ -35,6 +35,6 @@ jobs:
         with:
           service: liatrio_apprenticeship_exercise
           region: us-west1
-          image: docker.io/${{secrets.DOCKER_USER}}/liatrio_exercise
+          image: docker.io/${{secrets.DOCKER_USER}}/liatrioexercise
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
