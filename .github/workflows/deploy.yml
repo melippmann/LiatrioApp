@@ -28,7 +28,7 @@ jobs:
         with:
             create_credentials_file: true
             workload_identity_provider: 'projects/492409410562/locations/global/workloadIdentityPools/liatrio-pool/providers/liatrio-pool'
-            service_account: '492409410562-compute@developer.gserviceaccount.com'
+            service_account: 'service-492409410562@serverless-robot-prod.iam.gserviceaccount.com'
       - name: Deploy to Cloud Run
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v0
