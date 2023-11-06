@@ -1,5 +1,8 @@
 name: build and deploy to cloud run
 
+permissions:
+    id-token: write
+    contents: read
 on:
     push:
         branches: [ "main" ]
