@@ -27,7 +27,7 @@ jobs:
         uses: 'google-github-actions/auth@v1'
         with:
             create_credentials_file: true
-            workload_identity_provider: 'principal://iam.googleapis.com/projects/492409410562/locations/global/workloadIdentityPools/liatrio-pool/subject/SUBJECT_ATTRIBUTE_VALUE'
+            workload_identity_provider: 'projects/492409410562/locations/global/workloadIdentityPools/liatrio-pool/providers/liatrio-pool'
       - name: Deploy to Cloud Run
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v0
