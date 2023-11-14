@@ -6,7 +6,7 @@ const hostname='localhost'
 var jsonObj = {
     "message": "My name is Meher Lippmann",
     "timestamp": new Date().getTime()/1000,
-    "deploy": "Build and deploy!",
+    "deploy": "Build and deploy with public access!",
 }
 
 
