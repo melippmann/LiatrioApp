@@ -1,5 +1,7 @@
 [![Apprenticeship-action](https://github.com/melippmann/LiatrioApp/actions/workflows/apprenticeship-action.yml/badge.svg)](https://github.com/melippmann/LiatrioApp/actions/workflows/apprenticeship-action.yml)
 
+[![build and deploy to cloud run](https://github.com/melippmann/LiatrioApp/actions/workflows/deploy.yml/badge.svg)](https://github.com/melippmann/LiatrioApp/actions/workflows/deploy.yml)
+
 # Liatrio Apprenticeship Interview Exercise
 <details><summary>Description</summary><p>
 
@@ -304,13 +306,54 @@ https://medium.com/@deepakshakya/beginners-guide-to-use-docker-build-run-push-an
 ## Cloud Deployment
 
 <details><summary>details</summary><p>
+<!-- 
+## Create new project
+left panel: VM instances
+## create instance
+  name: instance-1
+  region: us-west1 (oregon)
+  zone: us-west1-b
+  Machine configuration: E2
+  Machine type: shared-core e2-micro
+  availability: standard
+## Container
+  # deploy container
+    container image: melippmann / liatrio_apprenticeship_exercise
+  # boot disk
+    versopm: container-optimized OS 
+    boot disk type: standard persistent disk
+    size: 10 (GB)
+## Identity and API access
+  Compute Engine default service account
+## Access scopes
+  Allow default access
+## Firewall
+  allow HTTP trafic -->
 
+## Using Google Cloud Run:
+
+ deploy one revision from an existing conterin image
+ container image URL: docker.io/melippmann/liatrio_apprenticeship_exercise
+ service name: liatrio-apprenticeship-exercise
+ region: us-west1 (Oregon)
+ CPU is only allocated during request processing
+ maximum number of instances: 4
+ Ingress control: All
+ Authentication: Allow unauthenticated invocations
+ create
 </p>
 </details>
 
 ## Deployment Workflow
 
 <details><summary>details</summary><p>
+
+https://github.com/google-github-actions/deploy-cloudrun
+
+Configure workload identity federation with deployment pipelines for GitHub
+https://cloud.google.com/iam/docs/workload-identity-federation-with-deployment-pipelines
+
+
 
 </p>
 </details>
