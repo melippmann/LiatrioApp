@@ -26,7 +26,8 @@ jobs:
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v1'
         with:
-            create_credentials_file: true
+            # create_credentials_file: true
+            token_format: 'access_token'
             workload_identity_provider: 'principal://iam.googleapis.com/projects/492409410562/locations/global/workloadIdentityPools/liatrio-pool/subject/SUBJECT_ATTRIBUTE_VALUE'
             service_account: 'deploy-service@phonic-heaven-404203.iam.gserviceaccount.com'
       - name: Deploy to Cloud Run
